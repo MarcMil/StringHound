@@ -1,0 +1,2 @@
+Apk;PreAnalysisTime;StringClassifierTime;MethodClassifierTime;SlicingTime;OverallTime;ClassCount;MethodCount;MeanInstPerMethodCount;MedianInstPerMethodCount;MaxInstPerMethodCount;ApkInstCount;StringUniqCount;DecryptedStrings;SlicesCount
+tmp.JwduyS8VmJ.jar;16396;908;0;4334;21638;50;200021;62.126182965299684;25;2165;19694;360;90;110

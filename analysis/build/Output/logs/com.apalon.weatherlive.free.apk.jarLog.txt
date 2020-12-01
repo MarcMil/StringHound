@@ -1,0 +1,2 @@
+Apk;PreAnalysisTime;StringClassifierTime;MethodClassifierTime;SlicingTime;OverallTime;ClassCount;MethodCount;MeanInstPerMethodCount;MedianInstPerMethodCount;MaxInstPerMethodCount;ApkInstCount;StringUniqCount;DecryptedStrings;SlicesCount
+com.apalon.weatherlive.free.apk.jar;17946;1480;3;29542;48971;10216;262724;22.434183788665614;8;5287;1192332;17030;92;2020

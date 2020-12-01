@@ -1,0 +1,92 @@
+com/apalon/weatherlive/forecamap/a|void a(android.content.Context,android.graphics.Bitmap,java.lang.String,boolean)|java.io.File|void <init>(java.io.File,java.lang.String)|LQ==|V2VhdGhlcl9MaXZlX01hcF8wLnBuZw==
+com/facebook/appevents/g$a|void run()|java.lang.Class|java.lang.Class forName(java.lang.String)|LQ==|Y29tLmZhY2Vib29rLmNvcmUuQ29yZQ==
+com/apalon/weatherlive/data/weather/o|void <clinit>()|com.apalon.weatherlive.data.weather.o|d|LQ==|SU5TRVJUIElOVE8gbG9jYXRpb25zKHByb3ZpZGVyX2lkLHByb3ZpZGVyX3R5cGUscG9zdF9jb2RlLGxhdGl0dWRlLGxvbmdpdHVkZSxnbXRfb2Zmc2V0LGNpdHksYXJlYSxjb3VudHJ5LGxvY2FsZSxtYW51YWxfbG9jYXRpb24sYXV0b19sb2NhdGlvbix0cmFja190aW1lKSBWQUxVRVMgKD8sPyw/LD8sPyw/LD8sPyw/LD8sPyw/LD8p
+com/flurry/sdk/lm|void a(java.lang.String,java.util.List,java.lang.String)|android.content.Context|java.io.File getFileStreamPath(java.lang.String)|LQ==|LllGbHVycnlTZW5kZXJJbmRleC5pbmZvLm51bGw=
+com/flurry/sdk/lm|void a(java.lang.String,java.util.List,java.lang.String)|android.content.Context|java.io.File getFileStreamPath(java.lang.String)|LQ==|LllGbHVycnlTZW5kZXJJbmRleC5pbmZvLm51bGw=
+com/facebook/appevents/c|java.lang.String e()|com.facebook.appevents.c|e|LQ==|ZDQxZDhjZDk4ZjAwYjIwNGU5ODAwOTk4ZWNmODQyN2U=
+com/facebook/appevents/c|java.lang.String e()|com.facebook.appevents.c|e|LQ==|ZDQxZDhjZDk4ZjAwYjIwNGU5ODAwOTk4ZWNmODQyN2U=
+com/facebook/accountkit/internal/k|void <clinit>()|com.facebook.accountkit.internal.k|c|LQ==|aw==
+c/f/a/a/r/a|java.lang.String toString()|c.f.a.a.r.a|toString|LQ==|W2MuZi5hLmEuci5hOiBzaXplPTAsIGhhc2hTaXplPTAsIDAvMC8wLzAgcHJpL3NlYy90ZXIvc3BpbGwgKD0wKSwgdG90YWw6MF0=
+com/facebook/stetho/inspector/protocol/module/Runtime$Session|com.facebook.stetho.inspector.protocol.module.Runtime$GetPropertiesResponse getPropertiesForIterable(java.lang.Iterable,boolean)|com.facebook.stetho.inspector.protocol.module.Runtime$PropertyDescriptor|name|LQ==|MA==
+com/apalon/weatherlive/notifications/d/d|android.content.Intent b(com.apalon.weatherlive.data.weather.p,java.util.Map)|com.apalon.weatherlive.notifications.d.d|b|LQ==|Ni4w
+com/apalon/weatherlive/notifications/d/f|android.net.Uri a(android.content.Context,java.lang.String,android.graphics.Bitmap)|java.io.File|void <init>(java.io.File,java.lang.String)|LQ==|bm90aWZpY2F0aW9uX2ltYWdlcw==
+com/flurry/sdk/ki|java.lang.String a()|com.flurry.sdk.ki|a|LQ==|Rmx1cnJ5X0FuZHJvaWRfMjcyXzEwLjEuMA==
+com/apalon/weatherlive/data/weather/o|java.util.ArrayList b(android.database.sqlite.SQLiteDatabase)|android.database.sqlite.SQLiteDatabase|android.database.Cursor rawQuery(java.lang.String,java.lang.String[])|LQ==|U0VMRUNUIF9pZCxwcm92aWRlcl9pZCxwcm92aWRlcl90eXBlLHBvc3RfY29kZSxsYXRpdHVkZSxsb25naXR1ZGUsZ210X29mZnNldCxjaXR5LGFyZWEsY291bnRyeSxsb2NhbGUsbWFudWFsX2xvY2F0aW9uLGF1dG9fbG9jYXRpb24sdHJhY2tfdGltZSxmZWVkX3VwZGF0ZV90aW1lLGZlZWRfcHJvdmlkZXIgRlJPTSBgbG9jYXRpb25zYA==
+com/apalon/weatherlive/data/weather/l|java.lang.String k()|com.apalon.weatherlive.data.weather.l|k|JS4yZiwgJS4yZg==|TmFOLCBOYU4=
+com/apalon/weatherlive/notifications/d/f|android.net.Uri a(android.content.Context,java.lang.String)|java.io.File|void <init>(java.io.File,java.lang.String)|LQ==|bm90aWZpY2F0aW9uX2ltYWdlcw==
+androidx/percentlayout/widget/a$a|java.lang.String toString()|androidx.percentlayout.widget.a$a|toString|LQ==|UGVyY2VudExheW91dEluZm9ybWF0aW9uIHdpZHRoOiAtMSwwMDAwMDAgaGVpZ2h0IC0xLDAwMDAwMCwgbWFyZ2lucyAoLTEsMDAwMDAwLCAtMSwwMDAwMDAsICAtMSwwMDAwMDAsIC0xLDAwMDAwMCwgLTEsMDAwMDAwLCAtMSwwMDAwMDAp
+com/flurry/sdk/lm|void a(java.lang.String,byte[])|android.content.Context|java.io.File getFileStreamPath(java.lang.String)|LQ==|LnlmbHVycnlkYXRhc2VuZGVyYmxvY2subnVsbA==
+com/flurry/sdk/mp|void <clinit>()|com.flurry.sdk.mp|c|LQ==|RkNCTQ==
+com/apalon/weatherlive/data/weather/o|com.apalon.weatherlive.data.weather.l b(android.database.sqlite.SQLiteDatabase,long)|android.database.sqlite.SQLiteDatabase|android.database.Cursor rawQuery(java.lang.String,java.lang.String[])|LQ==|U0VMRUNUIF9pZCxwcm92aWRlcl9pZCxwcm92aWRlcl90eXBlLHBvc3RfY29kZSxsYXRpdHVkZSxsb25naXR1ZGUsZ210X29mZnNldCxjaXR5LGFyZWEsY291bnRyeSxsb2NhbGUsbWFudWFsX2xvY2F0aW9uLGF1dG9fbG9jYXRpb24sdHJhY2tfdGltZSxmZWVkX3VwZGF0ZV90aW1lLGZlZWRfcHJvdmlkZXIgRlJPTSBgbG9jYXRpb25zYCBXSEVSRSBgX2lkYD0/IExJTUlUIDE=
+com/apalon/advertiserx/FacebookTestAdsHelper|java.lang.String getTestDeviceHash(android.content.Context)|com.apalon.advertiserx.FacebookTestAdsHelper|getTestDeviceHash|LQ==|ZDlhZTRiOWVkYzJjOTJkMzliMGQ4MWNmZTdkMTIwZWM=
+com/apalon/weatherlive/data/weather/o|com.apalon.weatherlive.data.weather.p a(android.database.sqlite.SQLiteDatabase,long)|android.database.sqlite.SQLiteDatabase|android.database.Cursor rawQuery(java.lang.String,java.lang.String[])|LQ==|U0VMRUNUIF9pZCxwcm92aWRlcl9pZCxwcm92aWRlcl90eXBlLHBvc3RfY29kZSxsYXRpdHVkZSxsb25naXR1ZGUsZ210X29mZnNldCxjaXR5LGFyZWEsY291bnRyeSxsb2NhbGUsbWFudWFsX2xvY2F0aW9uLGF1dG9fbG9jYXRpb24sdHJhY2tfdGltZSxmZWVkX3VwZGF0ZV90aW1lLGZlZWRfcHJvdmlkZXIgRlJPTSBgbG9jYXRpb25zYCBXSEVSRSBgX2lkYD0/IExJTUlUIDE=
+com/facebook/stetho/common/ProcessUtil|java.lang.String readProcessName()|com.facebook.stetho.common.ProcessUtil|readProcessName|LQ==|amF2YQ==
+com/flurry/sdk/jy|java.lang.String g()|com.flurry.sdk.jy|g|LQ==|VW5rbm93bg==
+com/apalon/am3/m/h$a|java.lang.Object a()|com.apalon.am3.m.h$a|a|LQ==|LTY5MTIwMDAwMA==
+androidx/work/impl/k/b|java.lang.String toString()|androidx.work.impl.k.b|toString|WyBDb25uZWN0ZWQ9JWIgVmFsaWRhdGVkPSViIE1ldGVyZWQ9JWIgTm90Um9hbWluZz0lYiBd|WyBDb25uZWN0ZWQ9ZmFsc2UgVmFsaWRhdGVkPWZhbHNlIE1ldGVyZWQ9ZmFsc2UgTm90Um9hbWluZz1mYWxzZSBd
+com/google/android/exoplayer2/j0/f0|java.lang.String a(android.content.Context)|com.google.android.exoplayer2.j0.f0|a|LQ==|REU=
+com/facebook/GraphRequest|java.lang.String o()|com.facebook.GraphRequest|o|LQ==|bnVsbC9udWxs
+com/facebook/accountkit/ui/a|void <clinit>()|com.facebook.accountkit.ui.a|f|LQ==|QWNjb3VudEtpdENvbmZpZ3VyYXRpb24=
+com/facebook/accountkit/internal/AccountKitGraphRequest|void <clinit>()|com.facebook.accountkit.internal.AccountKitGraphRequest|i|LQ==|M2MyNWVmNzdhNDJmNTNiNjdhZmVjMzgyZTg2ZGY5M2Q3OTNlZjVjNzg5MWJiNmMxZmY1NTFiZjRmN2QyYWU1MQ==
+com/google/android/gms/common/images/WebImage|java.lang.String toString()|com.google.android.gms.common.images.WebImage|toString|LQ==|SW1hZ2UgMHgwIG51bGw=
+c/d/a/a|java.lang.String a(java.lang.String,java.lang.String,java.lang.String)|c.d.a.a|a|VVRGOA==|aHR0cHM6Ly9hcHAuYWRqdXN0LmlvL251bGw/Y2FtcGFpZ249Q3Jvc3Nwcm9tb19fbnVsbF91bmtub3duJnRyYWNrZXJfbGltaXQ9MTAwMDAw
+com/adjust/sdk/Util|java.lang.String quote(java.lang.String)|com.adjust.sdk.Util|quote|LQ==|J251bGwn
+com/facebook/stetho/common/ProcessUtil|java.lang.String getProcessName()|com.facebook.stetho.common.ProcessUtil|getProcessName|LQ==|amF2YQ==
+com/apalon/weatherlive/data/l/b|void a(android.database.sqlite.SQLiteDatabase)|com.apalon.weatherlive.data.l.b|a|LQ==|LTg2NDAw
+com/flurry/sdk/ll|com.flurry.sdk.kp b(java.lang.String)|android.content.Context|java.io.File getFileStreamPath(java.lang.String)|LQ==|LnlmbHVycnlkYXRhc2VuZGVyYmxvY2subnVsbA==
+com/apalon/android/support/g|java.lang.String toString()|com.apalon.android.support.g|toString|LQ==|T3B0aW9uYWxbbnVsbF0=
+c/f/a/a/p/g|void <clinit>()|c.f.a.a.p.g|a|LQ==|OTIyMzM3MjAzNjg1NDc3NTgwOA==
+c/f/a/a/p/g|void <clinit>()|c.f.a.a.p.g|b|LQ==|OTIyMzM3MjAzNjg1NDc3NTgwNw==
+androidx/work/impl/utils/ForceStopRunnable|void <clinit>()|androidx.work.impl.utils.ForceStopRunnable|c|LQ==|V00tRm9yY2VTdG9wUnVubmFibGU=
+com/google/android/gms/common/api/Status|java.lang.String zzg()|com.google.android.gms.common.api.Status|zzg|LQ==|U1VDQ0VTUw==
+com/google/android/gms/common/api/Status|java.lang.String zzg()|com.google.android.gms.common.api.Status|zzg|LQ==|U1VDQ0VTUw==
+com/google/android/gms/common/api/Status|java.lang.String zzg()|com.google.android.gms.common.api.Status|zzg|LQ==|U1VDQ0VTUw==
+com/google/android/gms/common/api/Status|java.lang.String zzg()|com.google.android.gms.common.api.Status|zzg|LQ==|U1VDQ0VTUw==
+com/facebook/appevents/o/b|java.lang.String f()|com.facebook.appevents.o.b|f|LQ==|MDE4ZDhjYTYtM2NhZS00Yzg0LTg5ZGQtYzkyNzgyMTA2MWRi
+com/google/android/exoplayer2/l|java.lang.String a()|com.google.android.exoplayer2.l|a|LQ==|Z29vZy5leG8uY29yZQ==
+com/facebook/accountkit/internal/AccountKitGraphRequest|java.lang.String g()|com.facebook.accountkit.internal.AccountKitGraphRequest|g|LQ==|N2I3MjNlMWZiMTZkZjNmNmE1M2ZmY2VkZjQ2NzI4ZTcwMzU2NzE5NTgzY2VjNzkwZTMzYjUwYzc4NzM1NWEzNA==
+com/facebook/accountkit/internal/AccountKitGraphRequest|java.lang.String g()|com.facebook.accountkit.internal.AccountKitGraphRequest|g|LQ==|bXVsdGlwYXJ0L2Zvcm0tZGF0YSBib3VuZGFyeT1mNDYwOTI1NjgzYzYzYTk2NWNhNGVkN2I5OTM0ZTc3MWIxNjMxYjBlMGUyZmVmM2U5YWE0M2QwZjExMzkyYjE0
+com/facebook/GraphRequest|java.lang.String p()|com.facebook.GraphRequest|p|LQ==|UEpkckdrd2M4LUUtS1lDRU1YdHZaWEVfMkNSWHQ0b2F0TUhq
+com/facebook/GraphRequest|java.lang.String p()|com.facebook.GraphRequest|p|LQ==|bXVsdGlwYXJ0L2Zvcm0tZGF0YSBib3VuZGFyeT1ndmdObmVocDN2WWpfRERYdXloTzI5TjE0eFFWWEl4Uw==
+com/adjust/sdk/AdjustFactory|java.lang.String getBaseUrl()|com.adjust.sdk.AdjustFactory|getBaseUrl|LQ==|aHR0cHM6Ly9hcHAuYWRqdXN0LmNvbQ==
+com/adjust/sdk/AdjustFactory|java.lang.String getGdprUrl()|com.adjust.sdk.AdjustFactory|getGdprUrl|LQ==|aHR0cHM6Ly9nZHByLmFkanVzdC5jb20=
+com/facebook/stetho/inspector/network/NetworkEventReporterImpl|java.lang.String nextRequestId()|com.facebook.stetho.inspector.network.NetworkEventReporterImpl|nextRequestId|LQ==|MA==
+androidx/work/impl/f|void <clinit>()|androidx.work.impl.f|j|LQ==|V00tV29ya0NvbnRpbnVhdGlvbkltcGw=
+androidx/work/impl/background/systemalarm/e|void <clinit>()|androidx.work.impl.background.systemalarm.e|k|LQ==|V00tU3lzdGVtQWxhcm1EaXNwYXRjaGU=
+androidx/work/impl/utils/j|void <clinit>()|androidx.work.impl.utils.j|c|LQ==|V00tU3RvcFdvcmtSdW5uYWJsZQ==
+androidx/work/impl/background/systemalarm/c|void <clinit>()|androidx.work.impl.background.systemalarm.c|e|LQ==|V00tQ29uc3RyYWludHNDbWRIYW5kbGU=
+androidx/gridlayout/widget/GridLayout$o|java.lang.String toString()|androidx.gridlayout.widget.GridLayout$o|toString|LQ==|LTIxNDc0ODM2NDg=
+com/facebook/accountkit/ui/a0$f|java.lang.String b(java.lang.String)|com.facebook.accountkit.ui.a0$f|b|LQ==|K251bGw=
+com/fyber/inneractive/sdk/c/i|java.lang.String getLocalUniqueId()|com.fyber.inneractive.sdk.c.i|getLocalUniqueId|LQ==|OGQwMzljZmMtMjY5ZS00YTZjLThhMDctZTE3YWUwZjc4ZTkx
+com/facebook/accountkit/internal/p|java.lang.String b()|com.facebook.accountkit.internal.p|b|LQ==|Y2MxODZkMjItYzljNC00MzBjLWEyMmYtNDg4YmY5ZmYzM2M2
+com/facebook/GraphRequest|java.lang.String l()|com.facebook.GraphRequest|l|LQ==|djQuMA==
+com/apalon/am3/l/d0|java.lang.String a()|com.apalon.am3.l.d0|a|LQ==|aHR0cHM6Ly9pby5hcHBtZXNzYWdlcy5jb20vdXBsb2Fkcy9hcHBtZXNzYWdlcy9saXZlLyVzL2NyeXB0ZWQvJXMuZGF0YQ==
+com/apalon/am3/l/d0|java.lang.String c()|com.apalon.am3.l.d0|c|LQ==|aHR0cHM6Ly9pby5hcHBtZXNzYWdlcy5jb20vZnJvbnRlbmQ=
+com/apalon/weatherlive/widget/weather/WeatherWidgetProvider4x3ForecastShort|java.lang.String c()|com.apalon.weatherlive.widget.weather.WeatherWidgetProvider4x3ForecastShort|c|LQ==|V2VhdGhlcldpZGdldFNjYWxhYmxlNHgzRm9yZWNhc3RTaG9ydF8=
+com/apalon/weatherlive/widget/weather/WeatherWidgetProvider4x3ForecastFull|java.lang.String c()|com.apalon.weatherlive.widget.weather.WeatherWidgetProvider4x3ForecastFull|c|LQ==|V2VhdGhlcldpZGdldFNjYWxhYmxlNHg0Rm9yZWNhc3RGdWxsXw==
+com/apalon/weatherlive/widget/weather/WeatherWidgetProvider4x3ForecastLong|java.lang.String c()|com.apalon.weatherlive.widget.weather.WeatherWidgetProvider4x3ForecastLong|c|LQ==|V2VhdGhlcldpZGdldFNjYWxhYmxlNHgzRm9yZWNhc3RMb25nXw==
+com/apalon/weatherlive/widget/weather/WeatherWidgetProvider4x2WithClock|java.lang.String a()|com.apalon.weatherlive.widget.weather.WeatherWidgetProvider4x2WithClock|a|LQ==|V2VhdGhlcldpZGdldFNjYWxhYmxlNHgyV2l0aENsb2NrXw==
+com/apalon/weatherlive/widget/weather/WeatherWidgetProvider4x3CircleWithClock|java.lang.String a()|com.apalon.weatherlive.widget.weather.WeatherWidgetProvider4x3CircleWithClock|a|LQ==|V2VhdGhlcldpZGdldFNjYWxhYmxlNHgzXw==
+com/facebook/accountkit/ui/u$a|java.lang.String g()|com.facebook.accountkit.ui.u$a|g|LQ==|dzAuUkVUVVJOX0xPR0lOX0ZMT1dfU1RBVEU=
+com/flurry/sdk/jt|java.lang.String h()|com.flurry.sdk.jt|h|LQ==|anQ=
+com/flurry/sdk/ip|java.lang.String d()|com.flurry.sdk.ip|d|LQ==|aXA=
+com/facebook/accountkit/internal/x|java.lang.String i()|com.facebook.accountkit.internal.x|i|LQ==|Y29tLmZhY2Vib29rLmFjY291bnRraXQuaW50ZXJuYWwueA==
+com/facebook/accountkit/internal/j|java.lang.String i()|com.facebook.accountkit.internal.j|i|LQ==|Y29tLmZhY2Vib29rLmFjY291bnRraXQuaW50ZXJuYWwuag==
+com/apalon/weatherlive/widget/weather/WeatherWidgetProvider1x1|java.lang.String a()|com.apalon.weatherlive.widget.weather.WeatherWidgetProvider1x1|a|LQ==|V2VhdGhlcldpZGdldFNjYWxhYmxlMXgxXw==
+com/apalon/weatherlive/widget/weather/WeatherWidgetProvider2x1|java.lang.String a()|com.apalon.weatherlive.widget.weather.WeatherWidgetProvider2x1|a|LQ==|V2VhdGhlcldpZGdldFNjYWxhYmxlMngxXw==
+com/apalon/weatherlive/widget/weather/WeatherWidgetProviderTextForecastShort|java.lang.String a()|com.apalon.weatherlive.widget.weather.WeatherWidgetProviderTextForecastShort|a|LQ==|V2lkZ2V0VGV4dEZvcmVjYXN0U2hvcnRf
+com/apalon/weatherlive/widget/weather/WeatherWidgetProvider4x2|java.lang.String a()|com.apalon.weatherlive.widget.weather.WeatherWidgetProvider4x2|a|LQ==|V2VhdGhlcldpZGdldFNjYWxhYmxlNHgyXw==
+com/flurry/sdk/kl|java.lang.String d()|com.flurry.sdk.kl|d|LQ==|a2w=
+com/flurry/sdk/ix|java.lang.String c()|com.flurry.sdk.ix|c|LQ==|Y29tLmZsdXJyeS5zZGsuaXg=
+com/flurry/sdk/mv|java.lang.String a()|com.flurry.sdk.mv|a|LQ==|bXY=
+com/flurry/sdk/lf|java.lang.String b()|com.flurry.sdk.lf|b|LQ==|bGY=
+com/flurry/android/FlurryAgent|java.lang.String b()|com.flurry.android.FlurryAgent|b|LQ==|Rmx1cnJ5QWdlbnQ=
+com/facebook/appevents/o/a|java.lang.String a()|com.facebook.appevents.o.a|a|LQ==|Y29tLmZhY2Vib29rLmFwcGV2ZW50cy5vLmE=
+com/facebook/internal/q|java.lang.String b()|com.facebook.internal.q|b|LQ==|cQ==
+com/facebook/appevents/o/c|java.lang.String a()|com.facebook.appevents.o.c|a|LQ==|Y29tLmZhY2Vib29rLmFwcGV2ZW50cy5vLmM=
+com/facebook/ads/internal/api/BuildConfigApi|java.lang.String getVersionName()|com.facebook.ads.internal.api.BuildConfigApi|getVersionName|LQ==|NS41LjA=
+com/facebook/appevents/o/e|java.lang.String c()|com.facebook.appevents.o.e|c|LQ==|Y29tLmZhY2Vib29rLmFwcGV2ZW50cy5vLmU=
+com/facebook/accountkit/internal/r|java.lang.String i()|com.facebook.accountkit.internal.r|i|LQ==|Y29tLmZhY2Vib29rLmFjY291bnRraXQuaW50ZXJuYWwucg==
+com/facebook/accountkit/internal/AccountKitGraphRequest|java.lang.String e()|com.facebook.accountkit.internal.AccountKitGraphRequest|e|LQ==|ZjE4NjU5ZDBkMzY0Mjk1YWQ4ZjAyZWE0NTIxYmVhY2M4ODRlZTllZjg4NzFmNmU1NzczMjAwZGM4YzU3ZTkyMw==
+com/facebook/GraphRequest|java.lang.String m()|com.facebook.GraphRequest|m|LQ==|Z2ZCVW1NTE1FbDhVclF6Q0l0VjFmSzhVX3pYYnlEWFlIMA==
+com/facebook/Profile|java.lang.String b()|com.facebook.Profile|b|LQ==|UHJvZmlsZQ==

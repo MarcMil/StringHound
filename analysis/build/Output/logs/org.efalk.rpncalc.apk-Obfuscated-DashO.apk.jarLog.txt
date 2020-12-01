@@ -1,0 +1,2 @@
+Apk;PreAnalysisTime;StringClassifierTime;MethodClassifierTime;SlicingTime;OverallTime;ClassCount;MethodCount;MeanInstPerMethodCount;MedianInstPerMethodCount;MaxInstPerMethodCount;ApkInstCount;StringUniqCount;DecryptedStrings;SlicesCount
+org.efalk.rpncalc.apk-Obfuscated-DashO.apk.jar;16127;936;1;4312;21376;50;200021;62.126182965299684;25;2165;19694;360;90;110
