@@ -15,6 +15,7 @@ class StringClassifierAnalysis(stringsFile: File, val parameters: Seq[String]) {
     val resultStream = new FileWriter(new File(StringDecryption.outputDir + "/results/" + parameters.head + ".txt"), false)
     val logStream = new FileWriter(new File(StringDecryption.outputDir + "/logs/" + parameters.head + "Log.txt"), false)
     logStream.write("AnalysisTime;StringCount\n")
+    System.out.println("Loading strings from " + stringsFile.getAbsolutePath)
     val strings = Source.fromFile(stringsFile.getAbsolutePath, "UTF-8").getLines().filter(l => l.nonEmpty).toList
     val encryptedStrings =
       strings.filter(s ⇒ StringClassifier.classify(s))

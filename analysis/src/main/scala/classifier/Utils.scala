@@ -18,7 +18,8 @@ object  Utils {
 
   def enjarify(apkPath: String): File = {
     val file = File.createTempFile("myJar", ".jar")
-    (getConfigValue("ENJARIFY_EXEC_CMD") + " -f " + apkPath + " -o " + file.getAbsolutePath).!!
+    val p = Runtime.getRuntime().exec(getConfigValue("ENJARIFY_EXEC_CMD") + " -f " + apkPath + " -o " + file.getAbsolutePath);
+    p.waitFor()
     file
   }
 

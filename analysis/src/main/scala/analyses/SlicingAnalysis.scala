@@ -1,9 +1,11 @@
 package analyses
-
+import java.util.Base64
+import java.nio.charset.StandardCharsets
 import java.io._
 import java.net.URL
 import java.time.Instant
 import java.time.temporal.ChronoUnit
+import java.util.Arrays.ArrayList
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.{Timer, TimerTask}
 
@@ -75,7 +77,7 @@ class SlicingAnalysis(val project: Project[URL], val parameters: Seq[String]) {
       val slicesCount = attempts.get()
       System.setOut(out)
       println("#slices: " + slicesCount)
-      System.setOut(devNullPrintStream)
+      //System.setOut(devNullPrintStream)
     }
   }
 
@@ -84,10 +86,10 @@ class SlicingAnalysis(val project: Project[URL], val parameters: Seq[String]) {
       val executionCount = executions.get()
       System.setOut(out)
       println("#executions: " + executionCount)
-      System.setOut(devNullPrintStream)
+      //System.setOut(devNullPrintStream)
     }
   }
-
+/*
   val relevantSinks: Set[String] = Source.fromFile("relevantSinks.txt").getLines().filter(l => l.nonEmpty && l.startsWith("<")).map { l =>
     val split = l.substring(1, l.lastIndexOf('>')).split(": ")
     val fqn = split(0)
@@ -95,7 +97,6 @@ class SlicingAnalysis(val project: Project[URL], val parameters: Seq[String]) {
     fqn + " " + methodSignature
   }.toSet
 
-  var decryptionContextSet = Map.empty[Method, (MethodTemplate, Set[ClassFile], ClassFile)]
 
 
   def isRelevantSink(mii: MethodInvocationInstruction): Boolean = {
@@ -105,8 +106,14 @@ class SlicingAnalysis(val project: Project[URL], val parameters: Seq[String]) {
       relevantSinks.contains(sink)
     } else false
   }
+*/
+
+  case class Lines(className: String, subsig: String, ctype : ObjectType, parameters: Array[Int])
 
 
+var decryptionContextSet = Map.empty[Method, (MethodTemplate, Set[ClassFile], ClassFile)]
+var paramIdx = -1;
+  var rrtime = -1L;
   def doAnalyze(t0: Long, bf: Boolean, debug: Boolean, isAndroid: Boolean): Unit = {
     out = System.out
     err = System.err
@@ -118,11 +125,12 @@ class SlicingAnalysis(val project: Project[URL], val parameters: Seq[String]) {
     else
       urls = new File(parameters.tail.head).listFiles(f ⇒ f.getName.endsWith(".jar")).map(_.toURI.toURL)
     resultStream = new FileWriter(new File(StringDecryption.outputDir + "/results/" + parameters.head + ".txt"), false)
+    resultStream.append("Initialization took\n");
+    val startup = System.currentTimeMillis() - time.TimeKeeper.Started;
+    resultStream.append(startup + "\n");
     val logStream = new FileWriter(new File(StringDecryption.outputDir + "/logs/" + parameters.head + "Log.txt"), false)
     logStream.write("Apk;PreAnalysisTime;StringClassifierTime;MethodClassifierTime;SlicingTime;OverallTime;ClassCount;MethodCount;MeanInstPerMethodCount;MedianInstPerMethodCount;MaxInstPerMethodCount;ApkInstCount;StringUniqCount;DecryptedStrings;SlicesCount\n")
     //inputResultStream = new FileWriter(new File("results/" + parameters.head + "-input-result.txt"), false)
-    System.setOut(devNullPrintStream)
-    System.setErr(devNullPrintStream)
     //deobfuscatedStrings = Map()
     implicit val p: Project[URL] = project
     implicit val classHierarchy: ClassHierarchy = project.classHierarchy
@@ -131,18 +139,18 @@ class SlicingAnalysis(val project: Project[URL], val parameters: Seq[String]) {
     val constantStringsWithMethod = project.get(StringConstantsInformationKey)
     constantStrings = constantStringsWithMethod.keySet.toSet ++ project.allProjectClassFiles.flatMap(c => c.fields).filter(f => f.fieldType == ObjectType.String && f.constantFieldValue.isDefined).map(f => f.constantFieldValue.get.valueToString).toSet
     StringClassifier.classify("dummy") // triggering to make sure that StringClassifier is initialized
-    val encryptedStrings =
+    /*val encryptedStrings =
       constantStringsWithMethod.par.map { case (s, ms) ⇒ s ->
         ms.filter(m ⇒ StringClassifier.classify(s, m.method))
-      }.filter(s => s._2.nonEmpty).seq.toMap
+      }.filter(s => s._2.nonEmpty).seq.toMap*/
 
     val t2 = System.currentTimeMillis()
-    val decryptionMethods = project.allMethodsWithBody.par.filter(m => MethodClassifier.classify(m, project)).seq
+    val decryptionMethods = project.allMethodsWithBody.par.seq
 
     val t3 = System.currentTimeMillis()
 
-    if (encryptedStrings.nonEmpty || decryptionMethods.nonEmpty) {
-      stringUsages = constantStrings.filter(s => s.length > 2).toList.sortBy((s: String) => (-s.length, s))
+    if (decryptionMethods.nonEmpty) {
+      /*stringUsages = constantStrings.filter(s => s.length > 2).toList.sortBy((s: String) => (-s.length, s))
       var decryptionMethodUsages: Set[Method] = Set.empty[Method]
       try {
         val callGraph = CallGraphFactory.createOPALCallGraph(project)
@@ -153,20 +161,32 @@ class SlicingAnalysis(val project: Project[URL], val parameters: Seq[String]) {
           decryptionMethodUsages = decryptionMethods.flatMap(dm => if (callGraph.contains(dm)) callGraph(dm) else Set.empty[Method]).toSet
       }
       decryptionMethodUsages = decryptionMethodUsages ++ encryptedStrings.
-        flatMap(m => m._2.map(m1 => m1.method).toSet).toSet
-      System.setOut(out)
-      println("Methods to slice: " + decryptionMethodUsages.size)
-      System.setOut(devNullPrintStream)
+        flatMap(m => m._2.map(m1 => m1.method).toSet).toSet*/
+      //System.setOut(out)
+      //println("Methods to slice: " + decryptionMethodUsages.size)
+      //System.setOut(devNullPrintStream)
       val cleanTimer = new Timer()
       cleanTimer.schedule(cleanTask, 1000, 120000)
       val timer = new Timer()
       timer.schedule(slicingTimerTask, 1000, 10000)
-      decryptionMethodUsages.foreach { method =>
+      val lines = Source.fromFile("Signatures.txt").getLines
+      val r : java.util.ArrayList[Lines] = new java.util.ArrayList()
+      for (line <- lines) {
+        val par = line.split("\\|");
+        val classname = line.substring(1, line.indexOf(":"))
+        var methodsig = line.substring(line.indexOf(":") + 2)
+        methodsig = methodsig.substring(0, methodsig.lastIndexOf(">"))
+        val params = par(1).split(",")
+        r.add(new Lines(classname, methodsig, ObjectType(classname.replace(".", "/")), params.map(_.toInt)))
+
+      }
+      decryptionMethods.foreach { method =>
 
         try {
 
           val domain = new ai.domain.l1.DefaultDomainWithCFGAndDefUse(project, method) with SlicingConfiguration
           val body = method.body.get
+
 
 
           lazy val result: AIResult {val domain: DefaultDomainWithCFGAndDefUse[URL]} = PerformAI(domain)
@@ -182,7 +202,34 @@ class SlicingAnalysis(val project: Project[URL], val parameters: Seq[String]) {
                 val params = invoke.methodDescriptor.parameterTypes
                 val sig = invoke.methodDescriptor.toJava(invoke.name)
 
-                if (invoke.isVirtualMethodCall && checkType(invoke.declaringClass)) {
+
+                var it = r.iterator()
+
+                var has = false;
+                while (it.hasNext && !has) {
+                  val o = it.next()
+                  paramIdx = -1;
+                  rrtime = -1;
+                  if (checkType(invoke.declaringClass, o.ctype)) {
+                      if (!has && o.subsig.equals(sig)) {
+                        params.iterator.zipWithIndex foreach { e =>
+                          val (t, index) = e
+                          if (checkType(t) || ObjectType.Object == t) {
+                            paramIdx = index;
+                            rrtime = System.currentTimeMillis();
+                              System.out.println("Processing call to " + invoke.declaringClass + "." + sig + " in " + method.classFile.fqn + ":" + method.name)
+                              processOrigins(params.size - 1 - index,
+                                new SinkInfo(invoke.declaringClass, sig, pc),
+                                method, project, result)
+                              has = true;
+
+                          }
+                        }
+
+                      }
+                  }
+                }
+/*                if (invoke.isVirtualMethodCall && checkType(invoke.declaringClass)) {
                   processOrigins(params.size, new SinkInfo(invoke.declaringClass, sig, pc), method, project, result)
                 }
                 params.iterator.zipWithIndex foreach { e =>
@@ -194,6 +241,7 @@ class SlicingAnalysis(val project: Project[URL], val parameters: Seq[String]) {
 
                   }
                 }
+ */
               case PUTFIELD.opcode =>
                 val fa = instruction.asInstanceOf[FieldWriteAccess]
                 if (checkType(fa.fieldType) || (ObjectType.Object == fa.fieldType)) {
@@ -237,7 +285,7 @@ class SlicingAnalysis(val project: Project[URL], val parameters: Seq[String]) {
         first = true
         cleanExecTimer.schedule(cleanTask, 1000, 120000)
         executionTimer.schedule(executionTimerTask, 1000, 10000)
-        executeBruteForceDecryption(encryptedStrings)
+        //executeBruteForceDecryption(encryptedStrings)
         cleanExecTimer.cancel()
         executionTimer.cancel()
       }
@@ -254,7 +302,7 @@ class SlicingAnalysis(val project: Project[URL], val parameters: Seq[String]) {
 
     val end = Instant.now()
     //val relevantMethods = methods.map(_._1).map(m => m.classFile.thisType.simpleName + " " + m)
-    val time = ChronoUnit.MILLIS.between(start, end)
+    val ctime = ChronoUnit.MILLIS.between(start, end)
     //val writer = new FileWriter(new File(StringDecryption.outputDir + "/results.json"), true)
 
     //val stringFile = new FileWriter(new File("results/" + parameters.head + "-PLAIN-STRINGS.txt"), false)
@@ -1098,7 +1146,19 @@ class SlicingAnalysis(val project: Project[URL], val parameters: Seq[String]) {
         if (res.length > 0) {
           ratio = removeConstantStrings(res).length.toDouble / res.length
         }
-        resultStream.append(s"${originalMethod.classFile.fqn};${originalMethod.signature.toJava};$ratio;${if (cl) 1 else 0};$encString;$escapedString\n")
+        //resultStream.append(s"${originalMethod.classFile.fqn};${originalMethod.signature.toJava};$ratio;${if (cl) 1 else 0};$encString;$escapedString\n")
+        try {
+          rrtime = System.currentTimeMillis() - rrtime;
+          resultStream.synchronized {
+            val str = s"${originalMethod.classFile.fqn}|${originalMethod.signature.toJava}|${sinkInfo.sinkDeclaringClass.toJava}|${sinkInfo.sinkMethod}|${Base64.getEncoder.encodeToString(encString.getBytes("UTF-8"))}|${Base64.getEncoder.encodeToString(escapedString.getBytes("UTF-8"))}|${paramIdx}|${rrtime}\n"
+            resultStream.append(str)
+            System.out.print("Result: " + str);
+
+          }
+        } catch {
+          case e : Exception => e.printStackTrace()
+
+        }
         resultStream.flush()
         //unfilteredResults += ((s"${originalMethod.classFile.fqn}:${originalMethod.signature.toJava}", res))
         successful.incrementAndGet()
@@ -1167,6 +1227,26 @@ class SlicingAnalysis(val project: Project[URL], val parameters: Seq[String]) {
     ot.exists { ot ⇒
       classHierarchy.isSubtypeOf(ot, CharSequenceObjectType) || // OrUnkown?!
         classHierarchy.allSubtypes(ot, reflexive = true).contains(CharSequenceObjectType)
+    }
+  }
+
+
+  def checkType(ty: Type, typSuper : ObjectType)(implicit classHierarchy: ClassHierarchy): Boolean = {
+    val ot = if (ty.isObjectType) {
+      Some(ty.asObjectType)
+    } else if (ty.isArrayType) {
+      val et = ty.asArrayType.elementType
+      if (et.isObjectType) {
+        Some(et.asObjectType)
+      } else {
+        None
+      }
+    } else {
+      None
+    }
+    ot.exists { ot ⇒
+      classHierarchy.isSubtypeOf(ot, typSuper) || // OrUnkown?!
+        classHierarchy.allSubtypes(ot, reflexive = true).contains(typSuper)
     }
   }
 

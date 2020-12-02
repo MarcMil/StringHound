@@ -1,2 +1,3 @@
 #!/bin/bash
-sbt 'set test in assembly := {}' clean assembly
+cd ..
+sbt 'set test in assembly := {}' clean assembly && cp cp /home/marc/StringHound/analysis/target/scala-2.12/deobfuscator-assembly-1.0.jar .

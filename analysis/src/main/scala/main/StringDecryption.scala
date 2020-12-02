@@ -12,6 +12,7 @@ import org.apache.commons.cli.{DefaultParser, Options}
 import org.opalj.br.analyses.Project
 import org.opalj.log._
 import org.slf4j.{Logger, LoggerFactory}
+import time.TimeKeeper
 
 import scala.io.Source
 
@@ -57,6 +58,8 @@ object StringDecryption {
     new File(outputDir + "/logs/").mkdir()
   }
 
+
+
   def main(args: Array[String]): Unit = {
     val command = new DefaultParser()
 
@@ -70,6 +73,7 @@ object StringDecryption {
 
       createDirs(outputDir)
 
+      TimeKeeper.Started = System.currentTimeMillis()
       val filename = line.getOptionValue("f")
       val file = new File(filename)
       if (!file.exists() || !file.isFile) {
@@ -114,6 +118,7 @@ object StringDecryption {
       }
     } catch {
       case e: Throwable => import org.apache.commons.cli.HelpFormatter
+        e.printStackTrace()
         val formatter = new HelpFormatter()
         formatter.printHelp("StringDecryption", options)
     }
@@ -205,6 +210,7 @@ object StringDecryption {
       }
     } catch {
       case e: Throwable =>
+        e.printStackTrace()
         logger.error(parameters.head)
         logger.error(e.getMessage)
         logger.error(e.getStackTrace.mkString("\n"))
